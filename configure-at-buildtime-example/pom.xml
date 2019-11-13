@@ -58,7 +58,7 @@
                     </descriptorRefs>
                         <archive>
                         <manifest>
-                            <mainClass>ConfigureAtBuildTime</mainClass>
+                            <mainClass>example.buildtime.ConfigureAtBuildTime</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -87,6 +87,7 @@
                 </executions>
                 <configuration>
                     <skip>false</skip>
+                    <imageName>example</imageName>
                     <buildArgs>
                         --no-fallback
                     </buildArgs>
