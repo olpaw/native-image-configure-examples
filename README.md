@@ -13,9 +13,10 @@ which `Handler` should be used by the application (`CurrentTimeHandler` or
 
 * In contrast `configure-at-buildtime-example` performs the JSON parsing as
   part of building the image. In this case the image does not contain any parts
-  of the Jackson framework. When this image gets executed it can run the handler
-  right away since it was already determined at build time which hander should
-  be used.
+  of the Jackson framework (can be verified easily by adding
+  `-H:+PrintAnalysisCallTree` to the `<buildArgs>` in `pom.xml`).  When this
+  image gets executed it can run the handler right away since it was already
+  determined at build time which hander should be used.
 
 To learn more about this topic please read [Initialize Once, Start Fast: Application Initializationat Build Time](http://www.christianwimmer.at/Publications/Wimmer19a/Wimmer19a.pdf).
 
@@ -28,8 +29,8 @@ To learn more about this topic please read [Initialize Once, Start Fast: Applica
 * Once you are done with building both images run:
   * `$JAVA_HOME/bin/native-image --server-shutdown`
 * The built executables are:
-  * `configure-at-runtime-example/target/configureatruntime`
-  * `configure-at-buildtime-example/target/configureatbuildtime`
+  * `configure-at-runtime-example/target/example`
+  * `configure-at-buildtime-example/target/example`
 
 # Demo run:
 
